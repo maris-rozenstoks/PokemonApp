@@ -9,21 +9,29 @@
 /* Begin PBXBuildFile section */
 		FC2DC14D2AFD3E100028D110 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2DC14C2AFD3E100028D110 /* AppDelegate.swift */; };
 		FC2DC14F2AFD3E100028D110 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2DC14E2AFD3E100028D110 /* SceneDelegate.swift */; };
-		FC2DC1512AFD3E100028D110 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2DC1502AFD3E100028D110 /* ViewController.swift */; };
+		FC2DC1512AFD3E100028D110 /* PokemonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2DC1502AFD3E100028D110 /* PokemonDetailViewController.swift */; };
 		FC2DC1542AFD3E100028D110 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC2DC1522AFD3E100028D110 /* Main.storyboard */; };
 		FC2DC1562AFD3E150028D110 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC2DC1552AFD3E150028D110 /* Assets.xcassets */; };
 		FC2DC1592AFD3E150028D110 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC2DC1572AFD3E150028D110 /* LaunchScreen.storyboard */; };
+		FC2DC1652AFD3F2E0028D110 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2DC1642AFD3F2E0028D110 /* Pokemon.swift */; };
+		FC2DC1672AFD48450028D110 /* PokemonTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2DC1662AFD48450028D110 /* PokemonTableViewController.swift */; };
+		FC2DC1692AFD4B590028D110 /* PokemonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2DC1682AFD4B590028D110 /* PokemonTableViewCell.swift */; };
+		FC2DC16D2AFD59A30028D110 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = FC2DC16C2AFD59A30028D110 /* SDWebImage */; };
+		FC2DC16F2AFD59A30028D110 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = FC2DC16E2AFD59A30028D110 /* SDWebImageMapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FC2DC1492AFD3E100028D110 /* PokemonApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokemonApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC2DC14C2AFD3E100028D110 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC2DC14E2AFD3E100028D110 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FC2DC1502AFD3E100028D110 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FC2DC1502AFD3E100028D110 /* PokemonDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetailViewController.swift; sourceTree = "<group>"; };
 		FC2DC1532AFD3E100028D110 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FC2DC1552AFD3E150028D110 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC2DC1582AFD3E150028D110 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC2DC15A2AFD3E150028D110 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC2DC1642AFD3F2E0028D110 /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
+		FC2DC1662AFD48450028D110 /* PokemonTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonTableViewController.swift; sourceTree = "<group>"; };
+		FC2DC1682AFD4B590028D110 /* PokemonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +39,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC2DC16F2AFD59A30028D110 /* SDWebImageMapKit in Frameworks */,
+				FC2DC16D2AFD59A30028D110 /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +66,51 @@
 		FC2DC14B2AFD3E100028D110 /* PokemonApp */ = {
 			isa = PBXGroup;
 			children = (
-				FC2DC14C2AFD3E100028D110 /* AppDelegate.swift */,
-				FC2DC14E2AFD3E100028D110 /* SceneDelegate.swift */,
-				FC2DC1502AFD3E100028D110 /* ViewController.swift */,
-				FC2DC1522AFD3E100028D110 /* Main.storyboard */,
+				FC2DC1602AFD3E440028D110 /* AppDelegate */,
+				FC2DC1632AFD3E9B0028D110 /* Model */,
+				FC2DC1622AFD3E750028D110 /* View */,
+				FC2DC1612AFD3E590028D110 /* Controller */,
 				FC2DC1552AFD3E150028D110 /* Assets.xcassets */,
-				FC2DC1572AFD3E150028D110 /* LaunchScreen.storyboard */,
 				FC2DC15A2AFD3E150028D110 /* Info.plist */,
 			);
 			path = PokemonApp;
+			sourceTree = "<group>";
+		};
+		FC2DC1602AFD3E440028D110 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				FC2DC14E2AFD3E100028D110 /* SceneDelegate.swift */,
+				FC2DC14C2AFD3E100028D110 /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		FC2DC1612AFD3E590028D110 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FC2DC1662AFD48450028D110 /* PokemonTableViewController.swift */,
+				FC2DC1682AFD4B590028D110 /* PokemonTableViewCell.swift */,
+				FC2DC1502AFD3E100028D110 /* PokemonDetailViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+			usesTabs = 0;
+		};
+		FC2DC1622AFD3E750028D110 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FC2DC1522AFD3E100028D110 /* Main.storyboard */,
+				FC2DC1572AFD3E150028D110 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FC2DC1632AFD3E9B0028D110 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FC2DC1642AFD3F2E0028D110 /* Pokemon.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +129,10 @@
 			dependencies = (
 			);
 			name = PokemonApp;
+			packageProductDependencies = (
+				FC2DC16C2AFD59A30028D110 /* SDWebImage */,
+				FC2DC16E2AFD59A30028D110 /* SDWebImageMapKit */,
+			);
 			productName = PokemonApp;
 			productReference = FC2DC1492AFD3E100028D110 /* PokemonApp.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +161,9 @@
 				Base,
 			);
 			mainGroup = FC2DC1402AFD3E100028D110;
+			packageReferences = (
+				FC2DC16B2AFD59A30028D110 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = FC2DC14A2AFD3E100028D110 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,7 +191,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC2DC1512AFD3E100028D110 /* ViewController.swift in Sources */,
+				FC2DC1512AFD3E100028D110 /* PokemonDetailViewController.swift in Sources */,
+				FC2DC1652AFD3F2E0028D110 /* Pokemon.swift in Sources */,
+				FC2DC1672AFD48450028D110 /* PokemonTableViewController.swift in Sources */,
+				FC2DC1692AFD4B590028D110 /* PokemonTableViewCell.swift in Sources */,
 				FC2DC14D2AFD3E100028D110 /* AppDelegate.swift in Sources */,
 				FC2DC14F2AFD3E100028D110 /* SceneDelegate.swift in Sources */,
 			);
@@ -361,6 +417,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FC2DC16B2AFD59A30028D110 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.18.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FC2DC16C2AFD59A30028D110 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FC2DC16B2AFD59A30028D110 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		FC2DC16E2AFD59A30028D110 /* SDWebImageMapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FC2DC16B2AFD59A30028D110 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImageMapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FC2DC1412AFD3E100028D110 /* Project object */;
 }
